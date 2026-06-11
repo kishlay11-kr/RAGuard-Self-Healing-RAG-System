@@ -51,7 +51,6 @@ Example:
 
 ## Future Improvements
 - Frontend dashboard
-- Confidence scoring
 - Multi-document retrieval
 - Evaluation metrics
 
