@@ -52,7 +52,7 @@ Example:
 ## Future Improvements
 - Frontend dashboard
 - Multi-document retrieval
-- Evaluation metrics
+- Evaluation metrics 
 
 ## Author
 Kishlay Kumar
