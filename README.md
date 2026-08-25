@@ -1,58 +1,22 @@
-# RAGuard 🚀
+# RAGuard Backend
 
-A self-healing RAG pipeline for intelligent document question answering using LangGraph, FastAPI, and ChromaDB.
+FastAPI backend for **RAGuard: A Self-Healing RAG Pipeline for Reliable Career & Placement Intelligence**.
 
-## Problem
-Traditional RAG systems often fail when user queries are vague, ambiguous, or retrieval quality is poor.
+This phase only initializes the backend architecture. RAG, ingestion, embeddings, vector storage, and LangGraph workflows will be added in later phases.
 
-## Solution
-RAGuard introduces a self-healing retrieval pipeline with:
-- Critic-based answer evaluation
-- Automatic query reformulation
-- Multi-step retrieval retry
-- Context-aware response generation
+## Run Locally
 
-## Features
-✅ PDF Upload & Processing  
-✅ ChromaDB Vector Store  
-✅ LangGraph Workflow  
-✅ Critic Agent  
-✅ Query Reformulation  
-✅ Self-Healing Retrieval  
-✅ FastAPI Backend  
-✅ Swagger API Testing
-
-## Architecture
-[Add architecture image]
-
-## Tech Stack
-- LangChain
-- LangGraph
-- FastAPI
-- ChromaDB
-- Sentence Transformers
-- Python
-
-## API Demo
-
-### Upload PDF
-POST `/api/v1/upload`
-
-### Query Document
-POST `/api/v1/query`
-
-Example:
-
-```json
-{
-  "question": "Summarize SQL joins"
-}
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+uvicorn app.main:app --reload
 ```
 
-## Future Improvements
-- Frontend dashboard
-- Multi-document retrieval
-- Evaluation metrics 
+Health check:
 
-## Author
-Kishlay Kumar
+```bash
+curl http://127.0.0.1:8000/api/v1/health
+```
